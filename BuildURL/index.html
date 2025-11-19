@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UTM Link Builder</title>
+  <link rel="icon" type="image/x-icon" href="/img/Tree_red.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script></head>
+<body>
+  <div class="app">
+    <h1>
+      <img src="img/Tree_white.png" class="logo-img" alt="White LFX Logo">
+      UTM Link Builder
+    </h1>
+    <p class="subtitle">
+      Paste your base URL and add UTM parameters
+    </p>
+
+    <div class="grid">
+      <div class="grid-full">
+        <label for="baseUrl">
+          Base URL
+          <span class="badge">required</span>
+        </label>
+        <input
+          id="baseUrl"
+          type="url"
+          placeholder="https://example.com/landing-page" />
+      </div>
+
+        <div>
+        <label for="utmSource">
+            utm_source
+            <span class="badge">required</span>
+        </label>
+        <select id="utmSource">
+            <option value="">Select source…</option>
+            <option value="facebook">facebook</option>
+            <option value="instagram">instagram</option>
+            <option value="linkedin">linkedin</option>
+            <option value="google">google</option>
+            <option value="email">email</option>
+            <option value="newsletter">newsletter</option>
+            <option value="direct_email">direct_email</option>
+            <option value="referral_partner">referral_partner</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="utmMedium">
+            utm_medium
+            <span class="badge">required</span>
+        </label>
+        <select id="utmMedium">
+            <option value="">Select medium…</option>
+            <option value="paid_social">paid_social</option>
+            <option value="organic_social">organic_social</option>
+            <option value="cpc">cpc</option>
+            <option value="email">email</option>
+            <option value="display">display</option>
+            <option value="offline">offline</option>
+        </select>
+        </div>
+
+      <div class="grid-full">
+        <label for="utmCampaign">
+          utm_campaign
+          <span class="badge">required</span>
+        </label>
+        <input
+          id="utmCampaign"
+          type="text"
+          placeholder="spring_sale, black_friday_2025" />
+      </div>
+
+      <div>
+        <label for="utmContent">
+          utm_content
+          <span class="badge">optional</span>
+        </label>
+        <input
+          id="utmContent"
+          type="text"
+          placeholder="creative_a, header_banner" />
+      </div>
+
+      <div>
+        <label for="utmTerm">
+          utm_term
+          <span class="badge">optional</span>
+        </label>
+        <input
+          id="utmTerm"
+          type="text"
+          placeholder="keyword or audience" />
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-ghost" id="clearBtn">
+        Clear
+      </button>
+    </div>
+
+    <div class="output-block">
+      <div class="output-label">
+        <span>Final URL</span>
+      </div>
+      <div class="output-row">
+        <input id="resultUrl" type="text" readonly placeholder="Your final URL will appear here…" />
+        <button class="btn-ghost" id="copyBtn">Copy</button>
+      </div>
+      <div class="copy-status" id="copyStatus"></div>
+    </div>
+  </div>
+</body>
+</html>
